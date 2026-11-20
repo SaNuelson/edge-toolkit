@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "npm run build --workspaces --if-present",
+    "package:bgg": "npm run package --workspace @edge-toolkit/bgg-linker",
     "test": "npm run test --workspaces --if-present",
     "typecheck": "npm run typecheck --workspaces --if-present"
   },
@@ -16,9 +17,10 @@
     "@types/chrome": "^0.1.1",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^24.3.0",
-    "esbuild": "^0.25.9",
+    "adm-zip": "^0.6.1",
+    "esbuild": "^0.28.2",
     "jsdom": "^26.1.0",
     "typescript": "^5.9.2",
-    "vitest": "^3.2.4"
+    "vitest": "^5.1.1"
   }
 }

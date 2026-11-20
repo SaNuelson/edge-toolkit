@@ -39,3 +39,18 @@ npm run build
 
 Then open `edge://extensions`, enable **Developer mode**, choose **Load unpacked**,
 and select `apps/bgg-linker/dist`.
+
+## Package and share
+
+Create a ZIP that can be shared with another Edge user:
+
+```sh
+npm run package:bgg
+```
+
+The package is written to `artifacts/bgg-linker-<version>.zip`. The recipient
+must unzip it, open `edge://extensions`, enable **Developer mode**, choose
+**Load unpacked**, and select the extracted folder.
+
+Pushing a tag named `bgg-linker-v<version>` publishes the matching ZIP as a
+GitHub Release asset after the workflow verifies the build and tests.
