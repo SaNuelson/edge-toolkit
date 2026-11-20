@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "BGG Linker",
+  "version": "0.1.1",
+  "description": "Find BoardGameGeek pages and ratings for games on vendor product pages.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://boardgamegeek.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "BGG Linker settings"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "exclude_matches": ["https://boardgamegeek.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

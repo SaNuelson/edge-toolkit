@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BGG Linker settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Edge Toolkit</p>
+      <h1>BGG Linker</h1>
+      <p>
+        Search links work without configuration. Ratings use BGG's XML API, which now requires an
+        approved application and bearer token.
+      </p>
+      <form id="settings-form">
+        <label for="bgg-token">BGG application token</label>
+        <input id="bgg-token" name="bgg-token" type="password" autocomplete="off" spellcheck="false" />
+        <p class="help">
+          Stored only in this browser profile. Register a non-commercial application at
+          <a href="https://boardgamegeek.com/applications" target="_blank" rel="noopener noreferrer">boardgamegeek.com/applications</a>.
+        </p>
+        <div class="actions">
+          <button type="submit">Save settings</button>
+          <button id="test-connection" class="secondary" type="button">Test connection</button>
+        </div>
+        <p id="save-status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

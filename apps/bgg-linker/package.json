@@ -1,0 +1,14 @@
+{
+  "name": "@edge-toolkit/bgg-linker",
+  "version": "0.1.1",
+  "private": true,
+  "description": "Adds BoardGameGeek links and ratings to board-game vendor pages.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.2.5"
+  }
+}

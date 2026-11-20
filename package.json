@@ -1,0 +1,24 @@
+{
+  "name": "edge-toolkit",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A monorepo for focused Microsoft Edge extensions.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.1",
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^24.3.0",
+    "esbuild": "^0.25.9",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
